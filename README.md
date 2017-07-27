@@ -19,44 +19,50 @@ Odoo 的RESTful风格接口模块
 
 详细说明：...
 
-接口名称 get查询接口
-1) 请求地址
-http://host/api/v1.0/res.partner?token=ae92b9de797e342771d45dd2c72602d71ccea3ab&per_page=80&page=1&fields=['name','mobile']
-2) 调用方式：HTTP get
-3) 接口描述：
-接口描述详情
-4) 请求参数:
-GET参数:
 
-5) 请求返回结果:
+
+## 接口名称
+
+### 1) 请求地址
+
+>http://d10c.y.appnxt.com/api/v1.0/get_token?a=admin&s=admin&d=d10c
+
+### 2) 调用方式：HTTP get
+
+### 3) 接口描述：
+
+* 接口描述详情
+
+### 4) 请求参数:
+
+#### GET参数:
+|字段名称       |字段说明         |类型            |必填            |备注     |
+| -------------|:--------------:|:--------------:|:--------------:| ------:|
+|a|用户名|string|Y|-|
+|s|密码|string|Y|-|
+|d|数据库|string|Y|-|
+
+
+
+### 5) 请求返回结果:
+
+```
 {
-    "per_page": 80,
-    "total": 1199,
-    "result": [
-        {
-            "mobile": "903",
-            "id": 1,
-            "name": "116150"
-        },
-        {
-            "mobile": "900",
-            "id": 2,
-            "name": "111702"
-        },
-        {
-            "mobile": "11103090",
-            "id": 3,
-            "name": "116129"
-        }
-        ……
-    ],
-    "page": 1
+    "token": "aHR0cDovL2QxMC5hcHBueHQuY29tLGQxMGMsYWRtaW4sMSwxNTAxMTYxMDk3",
+    "message": "",
+    "success": true
 }
-6) 请求返回结果参数说明:
+```
+
+
+### 6) 请求返回结果参数说明:
+|字段名称       |字段说明         |类型            |必填            |备注     |
+| -------------|:--------------:|:--------------:|:--------------:| ------:|
+|token|token|string|Y|-|
+|message|消息|string|Y|-|
+|success|成功标志|string|Y|-|
 
 
 
-http://appnxt.com
-
-
-Odoo开发实施交流QQ群: 19794653
+Odoo交流QQ群: 19794653
+网址: http://appnxt.com
